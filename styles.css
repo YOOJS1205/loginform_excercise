@@ -57,9 +57,15 @@ body {
     height: 18px;
 }
 
+.find-id::after {
+    content: '|';
+    margin-left: 4px;
+}
+
 .login p {
     line-height: 20px;
     font-size: 12px;
+    cursor: pointer;
 }
 
 .functions {

@@ -3,6 +3,11 @@ body, p, img {
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 :root {
     --purple: #711bff;
 }
@@ -15,8 +20,8 @@ body {
     background-color: #ffffff;
     position: absolute;
     left: 50%;
-    top: 35%;
-    transform: translate(-50%);
+    top: 50%;
+    transform: translate(-50%, -50%);
     padding: 30px 25px;
     width: 400px;
     height: 200px;

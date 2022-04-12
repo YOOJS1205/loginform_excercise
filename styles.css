@@ -16,6 +16,13 @@ body {
     background-color: #c4c4c4;
 }
 
+/* float 문제점을 해결하기 위한 장치 */
+.clear-fix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
 .log-in {
     background-color: #ffffff;
     position: absolute;
@@ -59,6 +66,7 @@ body {
 
 .find-id::after {
     content: '|';
+    margin: 0 4px;
     margin-left: 4px;
 }
 
@@ -69,13 +77,29 @@ body {
 }
 
 .functions {
-    display: flex;
-    justify-content: space-between;
     font-size: 12px;
     color: #767676;
 }
 
-.functions img {
-    height: 16px;
-    vertical-align: middle;
+.find {
+    float: left;
+}
+
+.find img,
+.find a {
+    float: left;
+}
+
+.signup {
+    float: right;
+}
+
+.signup img,
+.signup a {
+    float: left;
+}
+
+.find img,
+.signup img {
+    margin-right: 4px;
 }

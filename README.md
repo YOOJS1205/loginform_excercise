@@ -23,12 +23,34 @@
        /* 중앙 정렬 */
        position: absolute;
        left: 50%;
-       top: 35%;
-       transform: translate(-50%);
+       top: 50%;
+       transform: translate(-50%, -50%);
        padding: 30px 25px;
        width: 400px;
        height: 200px;
        box-sizing: border-box;
      }
      ```
-     => `left: 50%` / `top: 50%` 으로 중앙정렬을 하려했으나, 너무 밑에 배치가되어 `top: 35%` 를 하였을 때 얼추 수직정렬이 되었다. 해결해야할 문제이다.
+  2. 좌우 정렬
+     - flexbox => 수업시간에 배운 float 사용 시도<br>
+       flex를 사용하면 html의 코드가 늘어나는 단점이 생겨 간단하게 float를 사용하였다.
+     ```css
+     /* float에 생기는 문제를 해결하기 위해 부모에 해당 클래스 지정 */
+     .clear-fix::after {
+       content: "";
+       display: block;
+       clear: both;
+     }
+     /* float을 적용할 요소들 */
+     .find {
+       float: left;
+     }
+     .signup {
+       float: right;
+     }
+     ```
+  3. 이미지와 text의 높이 맞추기
+     - 방법론
+     1. display: inline-block + vertical-align에 고정 px 주기
+     2. float + margin에 고정 px 주기 (채택)<br>
+        => float 적용했을 때 높낮이가 잘 맞아서 margin을 주지는 않았다.
